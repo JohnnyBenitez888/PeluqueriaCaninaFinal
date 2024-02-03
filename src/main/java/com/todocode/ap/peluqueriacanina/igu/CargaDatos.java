@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.todocode.ap.peluqueriacanina.igu;
 
 /**
@@ -10,11 +7,10 @@ package com.todocode.ap.peluqueriacanina.igu;
  */
 public class CargaDatos extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CargaDatos
-     */
+    
     public CargaDatos() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -28,30 +24,30 @@ public class CargaDatos extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jlNombreMascota = new javax.swing.JLabel();
-        jtfNombreMascota = new javax.swing.JTextField();
-        jlRaza = new javax.swing.JLabel();
-        jtfRaza = new javax.swing.JTextField();
-        jlColor = new javax.swing.JLabel();
-        jtfColor = new javax.swing.JTextField();
-        jlAlergico = new javax.swing.JLabel();
-        jcbAlergico = new javax.swing.JComboBox<>();
-        jlAtencionEspecial = new javax.swing.JLabel();
-        jcbAtencionEspecial = new javax.swing.JComboBox<>();
-        jlNombreDuenio = new javax.swing.JLabel();
-        jtfNombreDuenio = new javax.swing.JTextField();
+        labelNombreMas = new javax.swing.JLabel();
+        txtNombreMascota = new javax.swing.JTextField();
+        labelRaza = new javax.swing.JLabel();
+        txtRaza = new javax.swing.JTextField();
+        labelColor = new javax.swing.JLabel();
+        txtColor = new javax.swing.JTextField();
+        labelAlergico = new javax.swing.JLabel();
+        boxAlergico = new javax.swing.JComboBox<>();
+        labelAtencion = new javax.swing.JLabel();
+        boxAtencion = new javax.swing.JComboBox<>();
+        labelNombreDueño = new javax.swing.JLabel();
+        txtNombreDueño = new javax.swing.JTextField();
         jlDireccion = new javax.swing.JLabel();
         jtfDireccion = new javax.swing.JTextField();
-        jlCelular = new javax.swing.JLabel();
-        jtfCelular = new javax.swing.JTextField();
-        jlObservaciones = new javax.swing.JLabel();
+        labelTel = new javax.swing.JLabel();
+        txtTel = new javax.swing.JTextField();
+        labelObservaciones = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jtaObservaciones = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        txtAObservaciones = new javax.swing.JTextArea();
+        btnLimpiar = new javax.swing.JButton();
+        labelIcon = new javax.swing.JLabel();
+        btnAtras = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
+        labelTitulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,56 +55,63 @@ public class CargaDatos extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jlNombreMascota.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jlNombreMascota.setForeground(new java.awt.Color(51, 51, 51));
-        jlNombreMascota.setText("Nombre:");
+        labelNombreMas.setBackground(new java.awt.Color(255, 255, 255));
+        labelNombreMas.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        labelNombreMas.setForeground(new java.awt.Color(51, 51, 51));
+        labelNombreMas.setText("Nombre:");
 
-        jtfNombreMascota.setBackground(new java.awt.Color(51, 51, 51));
-        jtfNombreMascota.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtfNombreMascota.setForeground(new java.awt.Color(255, 255, 255));
+        txtNombreMascota.setBackground(new java.awt.Color(51, 51, 51));
+        txtNombreMascota.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtNombreMascota.setForeground(new java.awt.Color(255, 255, 255));
 
-        jlRaza.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jlRaza.setForeground(new java.awt.Color(51, 51, 51));
-        jlRaza.setText("Raza:");
+        labelRaza.setBackground(new java.awt.Color(255, 255, 255));
+        labelRaza.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        labelRaza.setForeground(new java.awt.Color(51, 51, 51));
+        labelRaza.setText("Raza:");
 
-        jtfRaza.setBackground(new java.awt.Color(51, 51, 51));
-        jtfRaza.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtfRaza.setForeground(new java.awt.Color(255, 255, 255));
+        txtRaza.setBackground(new java.awt.Color(51, 51, 51));
+        txtRaza.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtRaza.setForeground(new java.awt.Color(255, 255, 255));
 
-        jlColor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jlColor.setForeground(new java.awt.Color(51, 51, 51));
-        jlColor.setText("Color:");
+        labelColor.setBackground(new java.awt.Color(255, 255, 255));
+        labelColor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        labelColor.setForeground(new java.awt.Color(51, 51, 51));
+        labelColor.setText("Color:");
 
-        jtfColor.setBackground(new java.awt.Color(51, 51, 51));
-        jtfColor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtfColor.setForeground(new java.awt.Color(255, 255, 255));
+        txtColor.setBackground(new java.awt.Color(51, 51, 51));
+        txtColor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtColor.setForeground(new java.awt.Color(255, 255, 255));
 
-        jlAlergico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jlAlergico.setForeground(new java.awt.Color(51, 51, 51));
-        jlAlergico.setText("Alérgico:");
+        labelAlergico.setBackground(new java.awt.Color(255, 255, 255));
+        labelAlergico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        labelAlergico.setForeground(new java.awt.Color(51, 51, 51));
+        labelAlergico.setText("Alérgico:");
 
-        jcbAlergico.setBackground(new java.awt.Color(51, 51, 51));
-        jcbAlergico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jcbAlergico.setForeground(new java.awt.Color(255, 255, 255));
-        jcbAlergico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Si", "No" }));
+        boxAlergico.setBackground(new java.awt.Color(51, 51, 51));
+        boxAlergico.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        boxAlergico.setForeground(new java.awt.Color(255, 255, 255));
+        boxAlergico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Si", "No" }));
 
-        jlAtencionEspecial.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jlAtencionEspecial.setForeground(new java.awt.Color(51, 51, 51));
-        jlAtencionEspecial.setText("Atención especial:");
+        labelAtencion.setBackground(new java.awt.Color(255, 255, 255));
+        labelAtencion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        labelAtencion.setForeground(new java.awt.Color(51, 51, 51));
+        labelAtencion.setText("Atención especial:");
 
-        jcbAtencionEspecial.setBackground(new java.awt.Color(51, 51, 51));
-        jcbAtencionEspecial.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jcbAtencionEspecial.setForeground(new java.awt.Color(255, 255, 255));
-        jcbAtencionEspecial.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Si", "No" }));
+        boxAtencion.setBackground(new java.awt.Color(51, 51, 51));
+        boxAtencion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        boxAtencion.setForeground(new java.awt.Color(255, 255, 255));
+        boxAtencion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Si", "No" }));
 
-        jlNombreDuenio.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jlNombreDuenio.setForeground(new java.awt.Color(51, 51, 51));
-        jlNombreDuenio.setText("Nombre del dueño:");
+        labelNombreDueño.setBackground(new java.awt.Color(255, 255, 255));
+        labelNombreDueño.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        labelNombreDueño.setForeground(new java.awt.Color(51, 51, 51));
+        labelNombreDueño.setText("Nombre Dueño:");
 
-        jtfNombreDuenio.setBackground(new java.awt.Color(51, 51, 51));
-        jtfNombreDuenio.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtfNombreDuenio.setForeground(new java.awt.Color(255, 255, 255));
+        txtNombreDueño.setBackground(new java.awt.Color(51, 51, 51));
+        txtNombreDueño.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtNombreDueño.setForeground(new java.awt.Color(255, 255, 255));
 
+        jlDireccion.setBackground(new java.awt.Color(255, 255, 255));
         jlDireccion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jlDireccion.setForeground(new java.awt.Color(51, 51, 51));
         jlDireccion.setText("Dirección:");
@@ -117,42 +120,52 @@ public class CargaDatos extends javax.swing.JFrame {
         jtfDireccion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jtfDireccion.setForeground(new java.awt.Color(255, 255, 255));
 
-        jlCelular.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jlCelular.setForeground(new java.awt.Color(51, 51, 51));
-        jlCelular.setText("Celular:");
+        labelTel.setBackground(new java.awt.Color(255, 255, 255));
+        labelTel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        labelTel.setForeground(new java.awt.Color(51, 51, 51));
+        labelTel.setText("Teléfono:");
 
-        jtfCelular.setBackground(new java.awt.Color(51, 51, 51));
-        jtfCelular.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtfCelular.setForeground(new java.awt.Color(255, 255, 255));
+        txtTel.setBackground(new java.awt.Color(51, 51, 51));
+        txtTel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtTel.setForeground(new java.awt.Color(255, 255, 255));
 
-        jlObservaciones.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jlObservaciones.setForeground(new java.awt.Color(51, 51, 51));
-        jlObservaciones.setText("Observaciones:");
+        labelObservaciones.setBackground(new java.awt.Color(255, 255, 255));
+        labelObservaciones.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        labelObservaciones.setForeground(new java.awt.Color(51, 51, 51));
+        labelObservaciones.setText("Observaciones:");
 
-        jtaObservaciones.setBackground(new java.awt.Color(51, 51, 51));
-        jtaObservaciones.setColumns(20);
-        jtaObservaciones.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jtaObservaciones.setForeground(new java.awt.Color(255, 255, 255));
-        jtaObservaciones.setRows(5);
-        jScrollPane1.setViewportView(jtaObservaciones);
+        txtAObservaciones.setBackground(new java.awt.Color(51, 51, 51));
+        txtAObservaciones.setColumns(20);
+        txtAObservaciones.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtAObservaciones.setForeground(new java.awt.Color(255, 255, 255));
+        txtAObservaciones.setRows(5);
+        jScrollPane1.setViewportView(txtAObservaciones);
 
-        jButton1.setBackground(new java.awt.Color(51, 51, 51));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Limpiar");
+        btnLimpiar.setBackground(new java.awt.Color(51, 51, 51));
+        btnLimpiar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/limpiar.png"))); // NOI18N
+        btnLimpiar.setText("Limpiar");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo-Peluqueria.png"))); // NOI18N
-        jLabel2.setToolTipText("");
+        labelIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo-Peluqueria.png"))); // NOI18N
+        labelIcon.setToolTipText("");
 
-        jButton2.setBackground(new java.awt.Color(51, 51, 51));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Atrás");
+        btnAtras.setBackground(new java.awt.Color(51, 51, 51));
+        btnAtras.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAtras.setForeground(new java.awt.Color(255, 255, 255));
+        btnAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/atras.png"))); // NOI18N
+        btnAtras.setText(" Atrás");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
 
-        jButton3.setBackground(new java.awt.Color(51, 51, 51));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Guardar");
+        btnGuardar.setBackground(new java.awt.Color(51, 51, 51));
+        btnGuardar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/guardar.png"))); // NOI18N
+        btnGuardar.setText(" Guardar");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -165,51 +178,54 @@ public class CargaDatos extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jlNombreMascota)
-                                    .addComponent(jlColor)
-                                    .addComponent(jlAlergico)
-                                    .addComponent(jlAtencionEspecial)
-                                    .addComponent(jlRaza))
+                                    .addComponent(labelNombreMas)
+                                    .addComponent(labelColor)
+                                    .addComponent(labelAlergico)
+                                    .addComponent(labelAtencion)
+                                    .addComponent(labelRaza))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jcbAlergico, javax.swing.GroupLayout.Alignment.LEADING, 0, 1, Short.MAX_VALUE)
+                                        .addComponent(boxAlergico, javax.swing.GroupLayout.Alignment.LEADING, 0, 1, Short.MAX_VALUE)
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                                             .addGap(1, 1, 1)
-                                            .addComponent(jcbAtencionEspecial, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jtfNombreMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jtfRaza, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jtfColor, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jlNombreDuenio)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jtfNombreDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(boxAtencion, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtNombreMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtRaza, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtColor, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(txtNombreDueño, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(labelNombreDueño)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jlDireccion)
-                                    .addComponent(jlCelular))
+                                    .addComponent(labelTel))
                                 .addGap(78, 78, 78)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jtfCelular)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
-                                    .addComponent(jtfDireccion, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtTel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
+                                        .addComponent(jtfDireccion, javax.swing.GroupLayout.Alignment.LEADING))))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jlObservaciones)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                        .addComponent(labelObservaciones)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                            .addComponent(jLabel2)
-                            .addGap(23, 23, 23))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addContainerGap()))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(labelIcon)
+                                .addGap(23, 23, 23))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                                .addGap(23, 23, 23)
+                                .addComponent(btnLimpiar)
+                                .addContainerGap())))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(75, 75, 75))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(91, 91, 91))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,58 +234,61 @@ public class CargaDatos extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlNombreMascota)
-                            .addComponent(jtfNombreMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(labelNombreMas)
+                            .addComponent(txtNombreMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlRaza)
-                            .addComponent(jtfRaza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(labelRaza)
+                            .addComponent(txtRaza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlColor)
-                            .addComponent(jtfColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(labelColor)
+                            .addComponent(txtColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlAlergico)
-                            .addComponent(jcbAlergico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(labelAlergico)
+                            .addComponent(boxAlergico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlAtencionEspecial)
-                            .addComponent(jcbAtencionEspecial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(labelAtencion)
+                            .addComponent(boxAtencion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlNombreDuenio)
-                            .addComponent(jtfNombreDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(labelNombreDueño)
+                            .addComponent(txtNombreDueño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(labelIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlDireccion)
-                            .addComponent(jtfDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlCelular)
-                            .addComponent(jtfCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jlObservaciones))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(34, 34, 34)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                            .addGap(85, 85, 85)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(20, Short.MAX_VALUE))
+                        .addGap(85, 85, 85)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jlDireccion)
+                                    .addComponent(jtfDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(labelTel)
+                                    .addComponent(txtTel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(labelObservaciones))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(39, 39, 39)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20))))
         );
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel1.setText("Carga de Datos");
+        labelTitulo.setBackground(new java.awt.Color(255, 255, 255));
+        labelTitulo.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        labelTitulo.setForeground(new java.awt.Color(51, 51, 51));
+        labelTitulo.setText("Carga de Datos");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -280,15 +299,14 @@ public class CargaDatos extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(186, 186, 186))
+                .addComponent(labelTitulo)
+                .addGap(188, 188, 188))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addComponent(labelTitulo)
+                .addGap(24, 24, 24)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -306,6 +324,13 @@ public class CargaDatos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    //BOTON SALIR
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        Principal pri = new Principal();
+        pri.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -343,31 +368,31 @@ public class CargaDatos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JComboBox<String> boxAlergico;
+    private javax.swing.JComboBox<String> boxAtencion;
+    private javax.swing.JButton btnAtras;
+    private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JComboBox<String> jcbAlergico;
-    private javax.swing.JComboBox<String> jcbAtencionEspecial;
-    private javax.swing.JLabel jlAlergico;
-    private javax.swing.JLabel jlAtencionEspecial;
-    private javax.swing.JLabel jlCelular;
-    private javax.swing.JLabel jlColor;
     private javax.swing.JLabel jlDireccion;
-    private javax.swing.JLabel jlNombreDuenio;
-    private javax.swing.JLabel jlNombreMascota;
-    private javax.swing.JLabel jlObservaciones;
-    private javax.swing.JLabel jlRaza;
-    private javax.swing.JTextArea jtaObservaciones;
-    private javax.swing.JTextField jtfCelular;
-    private javax.swing.JTextField jtfColor;
     private javax.swing.JTextField jtfDireccion;
-    private javax.swing.JTextField jtfNombreDuenio;
-    private javax.swing.JTextField jtfNombreMascota;
-    private javax.swing.JTextField jtfRaza;
+    private javax.swing.JLabel labelAlergico;
+    private javax.swing.JLabel labelAtencion;
+    private javax.swing.JLabel labelColor;
+    private javax.swing.JLabel labelIcon;
+    private javax.swing.JLabel labelNombreDueño;
+    private javax.swing.JLabel labelNombreMas;
+    private javax.swing.JLabel labelObservaciones;
+    private javax.swing.JLabel labelRaza;
+    private javax.swing.JLabel labelTel;
+    private javax.swing.JLabel labelTitulo;
+    private javax.swing.JTextArea txtAObservaciones;
+    private javax.swing.JTextField txtColor;
+    private javax.swing.JTextField txtNombreDueño;
+    private javax.swing.JTextField txtNombreMascota;
+    private javax.swing.JTextField txtRaza;
+    private javax.swing.JTextField txtTel;
     // End of variables declaration//GEN-END:variables
 }
