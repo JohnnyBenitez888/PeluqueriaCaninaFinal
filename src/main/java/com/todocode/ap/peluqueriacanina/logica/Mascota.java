@@ -1,5 +1,7 @@
 package com.todocode.ap.peluqueriacanina.logica;
 
+import com.todocode.ap.peluqueriacanina.logica.Duenio;
+import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,12 +10,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Mascota {
+public class Mascota implements Serializable {
 
     //Atributos
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE)
-    private int IdCliente;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int idCliente;
     @Basic
     private String nombre;
     private String raza;
@@ -38,8 +40,8 @@ public class Mascota {
         this.duenio = duenio;
     }
 
-    public Mascota(int IdCliente, String nombre, String raza, String color, String alergico, String atenEspecial, String observacion, Duenio duenio) {
-        this.IdCliente = IdCliente;
+    public Mascota(int idCliente, String nombre, String raza, String color, String alergico, String atenEspecial, String observacion, Duenio duenio) {
+        this.idCliente = idCliente;
         this.nombre = nombre;
         this.raza = raza;
         this.color = color;
@@ -51,11 +53,11 @@ public class Mascota {
 
     //GET and SET
     public int getIdCliente() {
-        return IdCliente;
+        return idCliente;
     }
 
-    public void setIdCliente(int IdCliente) {
-        this.IdCliente = IdCliente;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 
     public String getNombre() {
@@ -82,7 +84,7 @@ public class Mascota {
         this.color = color;
     }
 
-    public String isAlergico() {
+    public String getAlergico() {
         return alergico;
     }
 
@@ -90,7 +92,7 @@ public class Mascota {
         this.alergico = alergico;
     }
 
-    public String isAtenEspecial() {
+    public String getAtenEspecial() {
         return atenEspecial;
     }
 
@@ -114,9 +116,10 @@ public class Mascota {
         this.duenio = duenio;
     }
 
+    //toString
     @Override
     public String toString() {
-        return "Mascota{" + "IdCliente=" + IdCliente + ", nombre=" + nombre + ", raza=" + raza + ", color=" + color + ", alergico=" + alergico + ", atenEspecial=" + atenEspecial + ", observacion=" + observacion + ", duenio=" + duenio + '}';
+        return "Mascota{" + "idCliente=" + idCliente + ", nombre=" + nombre + ", raza=" + raza + ", color=" + color + ", alergico=" + alergico + ", atenEspecial=" + atenEspecial + ", observacion=" + observacion + ", duenio=" + duenio + '}';
     }
 
 }
