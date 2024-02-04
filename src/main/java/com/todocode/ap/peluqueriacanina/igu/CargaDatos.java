@@ -2,6 +2,7 @@
 package com.todocode.ap.peluqueriacanina.igu;
 
 import com.todocode.ap.peluqueriacanina.logica.Controladora;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -339,6 +340,8 @@ public class CargaDatos extends javax.swing.JFrame {
         
         control.guardar(nameMascota, raza, color, observa, alergico, ateEspe,nameDuenio, tel);
         limpiar();
+        
+        JOptionPane.showMessageDialog(null, "Carga de datos Exitosa");
         
     }//GEN-LAST:event_btnGuardarActionPerformed
 
