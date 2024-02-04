@@ -1,12 +1,16 @@
 
 package com.todocode.ap.peluqueriacanina.igu;
 
+import com.todocode.ap.peluqueriacanina.logica.Controladora;
+
 /**
  *
  * @author Johnny
  */
 public class CargaDatos extends javax.swing.JFrame {
 
+    
+    Controladora control = new Controladora();
     
     public CargaDatos() {
         initComponents();
@@ -324,7 +328,18 @@ public class CargaDatos extends javax.swing.JFrame {
 
     //BOTON GUARDAR--------------------------
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        // TODO add your handling code here:
+        String nameMascota = txtNombreMascota.getText();
+        String raza = txtRaza.getText();
+        String color = txtColor.getText();
+        String observa = txtAObservaciones.getText();
+        String alergico  = (String) boxAlergico.getSelectedItem();
+        String ateEspe = (String) boxAtencion.getSelectedItem();
+        String nameDuenio = txtNombreDueño.getText();
+        String tel = txtTel.getText();
+        
+        control.guardar(nameMascota, raza, color, observa, alergico, ateEspe,nameDuenio, tel);
+        limpiar();
+        
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     //BOTON LIMPIAR--------------------------
