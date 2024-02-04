@@ -2,9 +2,10 @@ package com.todocode.ap.peluqueriacanina.persistencia;
 
 import com.todocode.ap.peluqueriacanina.logica.Duenio;
 import com.todocode.ap.peluqueriacanina.logica.Mascota;
+import java.util.List;
 
 public class ControladoraPersistencia {
-    
+
     DuenioJpaController duenioJpa = new DuenioJpaController();
     MascotaJpaController mascotaJpa = new MascotaJpaController();
 
@@ -15,9 +16,8 @@ public class ControladoraPersistencia {
         mascotaJpa.create(mascota);
     }
 
-    
-    
-    
-    
-    
+    public List<Mascota> traerMascotas() {
+        return mascotaJpa.findMascotaEntities();
+    }
+
 }

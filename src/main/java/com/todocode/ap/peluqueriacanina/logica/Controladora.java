@@ -1,6 +1,7 @@
 package com.todocode.ap.peluqueriacanina.logica;
 
 import com.todocode.ap.peluqueriacanina.persistencia.ControladoraPersistencia;
+import java.util.List;
 
 
 public class Controladora {
@@ -28,4 +29,7 @@ public class Controladora {
         controlPersis.guardar(duenio, mascota); 
     }
     
+    public List<Mascota> traerMascotas(){
+        return controlPersis.traerMascotas();
+    }
 }
