@@ -1,8 +1,14 @@
 package com.todocode.ap.peluqueriacanina;
 
+import com.todocode.ap.peluqueriacanina.igu.Principal;
+
 public class PeluqueriaCanina {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        Principal pri = new Principal();
+        pri.setVisible(true);
+        pri.setLocationRelativeTo(null);
+        
     }
 }
