@@ -1,10 +1,19 @@
 package com.todocode.ap.peluqueriacanina.logica;
 
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-
+@Entity
 public class Duenio {
+
     //Atributos
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int IdDuenio;
+    @Basic
     private String nombre;
     private String telefono;
 
@@ -22,9 +31,8 @@ public class Duenio {
         this.nombre = nombre;
         this.telefono = telefono;
     }
-    
-    //GET and SET
 
+    //GET and SET
     public int getIdDuenio() {
         return IdDuenio;
     }
@@ -53,8 +61,5 @@ public class Duenio {
     public String toString() {
         return "Duenio{" + "IdDuenio=" + IdDuenio + ", nombre=" + nombre + ", telefono=" + telefono + '}';
     }
-    
-    
-    
-    
+
 }

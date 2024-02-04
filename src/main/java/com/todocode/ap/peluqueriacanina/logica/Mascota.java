@@ -1,17 +1,27 @@
 package com.todocode.ap.peluqueriacanina.logica;
 
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
+@Entity
 public class Mascota {
 
     //Atributos
+    @Id
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private int IdCliente;
+    @Basic
     private String nombre;
     private String raza;
     private String color;
     private String alergico;
     private String atenEspecial;
     private String observacion;
-    
+    @OneToOne
     private Duenio duenio;
 
     //Constructores
