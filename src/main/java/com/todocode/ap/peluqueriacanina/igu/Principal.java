@@ -168,7 +168,10 @@ public class Principal extends javax.swing.JFrame {
 
     //BOTON VER
     private void btnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerActionPerformed
-        
+        VerDatos vd = new VerDatos();
+        vd.setVisible(true);
+        this.dispose();
+        vd.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnVerActionPerformed
 
     //BOTON SALIR
