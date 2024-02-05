@@ -32,4 +32,8 @@ public class Controladora {
     public List<Mascota> traerMascotas(){
         return controlPersis.traerMascotas();
     }
+    
+    public void eliminarDato(int id){
+        controlPersis.eliminarDato(id);
+    }
 }

@@ -3,6 +3,8 @@ package com.todocode.ap.peluqueriacanina.igu;
 import com.todocode.ap.peluqueriacanina.logica.Controladora;
 import com.todocode.ap.peluqueriacanina.logica.Mascota;
 import java.util.List;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class VerDatos extends javax.swing.JFrame {
@@ -162,14 +164,21 @@ public class VerDatos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //Metodo cargar Tabla-------------------------------------------------------
     public void cargarTabla() {
+        
+        //PARA QUE EL USUARIO NO MUEVA DE LUGAR LAS COLUMNAS
+        tabla.getTableHeader().setReorderingAllowed(false);
+
         DefaultTableModel modelo = new DefaultTableModel() {
             //metodo para que filas y columnas no se puedan editar por el usuario
+            @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
         };
-        //Nombre de las columnas
+
+        //Nombre de las columnas.
         String titulos[] = {"ID", "Nombre", "Raza", "Color", "Alérgico", "At. Esp.", "Dueño", "Teléfono", "Observaciones"};
 
         //Setear nombres de cada columna.
@@ -179,35 +188,75 @@ public class VerDatos extends javax.swing.JFrame {
         List<Mascota> mascotas = control.traerMascotas();
 
         //cargar las mascotas y los duenios en la tabla
-        for (Mascota ma : mascotas) {
-            modelo.addRow(new Object[]{ma.getIdCliente(), ma.getNombre(), ma.getRaza(), ma.getColor(), ma.getAlergico(), ma.getAtenEspecial(),
-                ma.getDuenio().getNombre(), ma.getDuenio().getTelefono(), ma.getObservacion()});
+        if (mascotas != null) {
+            for (Mascota masco : mascotas) {
+                Object objeto[] = {masco.getIdCliente(), masco.getNombre(), masco.getRaza(), masco.getColor(), masco.getAlergico(), masco.getAtenEspecial(),
+                    masco.getDuenio().getNombre(), masco.getDuenio().getTelefono(), masco.getObservacion()};
+                modelo.addRow(objeto);
+            }
         }
+
         //agregar el modelo a la tabla
         tabla.setModel(modelo);
     }
 
-    //BOTON ELIMINAR
+    //BOTON ELIMINAR------------------------------------------------------------
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
 
+        //Controlo que la tabla no esté vacía.
+        if (tabla.getRowCount() > 0) {
 
+            //Controlo que se haya seleccionado un registro.
+            if (tabla.getSelectedRow() != -1) {
+
+                //Obtengo ID de la mascota a eliminar.
+                int idMascota = Integer.parseInt(String.valueOf(tabla.getValueAt(tabla.getSelectedRow(), 0)));
+
+                //Llamo al método borrar.
+                control.eliminarDato(idMascota);
+
+                //Aviso al usuario que borró correctamente.
+                mostrarMensaje("Dato eliminado correctamente.", "info", "Eliminación de Datos");
+
+                //Volvemos a cargar la tabla.
+                cargarTabla();
+            } else {
+                mostrarMensaje("Seleccione para eliminar", "error", "Eliminación de Datos");
+            }
+        } else {
+             mostrarMensaje("No hay datos para eliminar", "error", "Eliminación de Datos");
+        }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
-    //BOTON EDITAR
+    //BOTON EDITAR--------------------------------------------------------------
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
 
     }//GEN-LAST:event_btnEditarActionPerformed
 
-    //BOTON ATRAS
+    //BOTON ATRAS---------------------------------------------------------------
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
         Principal pri = new Principal();
         pri.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
+    //metodo Window-------------------------------------------------------------
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         cargarTabla();
     }//GEN-LAST:event_formWindowOpened
+
+    //metodo para mensajes JOptionPane------------------------------------------
+    public void mostrarMensaje(String mensaje, String tipo, String titulo) {
+        JOptionPane joption = new JOptionPane(mensaje);
+        if (tipo.equals("info")) {
+            joption.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        } else if (tipo.equals("error")) {
+            joption.setMessageType(JOptionPane.ERROR_MESSAGE);
+        }
+        JDialog dialogo = joption.createDialog(titulo);
+        dialogo.setAlwaysOnTop(true);
+        dialogo.setVisible(true);
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
