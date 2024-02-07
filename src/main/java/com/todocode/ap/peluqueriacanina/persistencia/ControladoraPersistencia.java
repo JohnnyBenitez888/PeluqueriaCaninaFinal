@@ -31,4 +31,8 @@ public class ControladoraPersistencia {
         }
     }
 
+    public Mascota traerMascota(int idMascota) {
+        return mascotaJpa.findMascota(idMascota);
+    }
+
 }

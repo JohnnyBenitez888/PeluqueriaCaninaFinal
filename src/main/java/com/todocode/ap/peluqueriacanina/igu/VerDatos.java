@@ -231,6 +231,26 @@ public class VerDatos extends javax.swing.JFrame {
     //BOTON EDITAR--------------------------------------------------------------
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
 
+        //Controlo que la tabla no esté vacía.
+        if (tabla.getRowCount() > 0) {
+
+            //Controlo que se haya seleccionado un registro.
+            if (tabla.getSelectedRow() != -1) {
+
+                //Obtengo ID de la mascota a editar.
+                int idMascota = Integer.parseInt(String.valueOf(tabla.getValueAt(tabla.getSelectedRow(), 0)));
+
+                //Llamo al método traerDato.
+                Mascota masco = control.traerDato(idMascota);
+                
+                
+                
+            } else {
+                mostrarMensaje("Seleccione para eliminar", "error", "Eliminación de Datos");
+            }
+        } else {
+             mostrarMensaje("No hay datos para eliminar", "error", "Eliminación de Datos");
+        }
     }//GEN-LAST:event_btnEditarActionPerformed
 
     //BOTON ATRAS---------------------------------------------------------------
