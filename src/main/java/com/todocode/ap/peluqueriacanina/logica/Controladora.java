@@ -41,5 +41,28 @@ public class Controladora {
         return controlPersis.traerMascota(idMascota);
     }
 
+    public void editarMascota(int idM, String nameMascota, String raza, String color, String observa, String alergico, String ateEspe, 
+            int idD, String nameDuenio, String tel) {
+        
+        //primero creamos el duenio ya que mascota necesita un duenio
+        Duenio duenio = new Duenio();
+        duenio.setIdDuenio(idD);
+        duenio.setNombre(nameDuenio);
+        duenio.setTelefono(tel);
+        
+        
+        Mascota mascota = new Mascota();
+        mascota.setIdCliente(idM);
+        mascota.setNombre(nameMascota);
+        mascota.setRaza(raza);
+        mascota.setColor(color);
+        mascota.setAlergico(alergico);
+        mascota.setAtenEspecial(ateEspe);
+        mascota.setObservacion(observa);
+        mascota.setDuenio(duenio);
+        
+        controlPersis.editarMascota(duenio, mascota); 
+    }
+
     
 }

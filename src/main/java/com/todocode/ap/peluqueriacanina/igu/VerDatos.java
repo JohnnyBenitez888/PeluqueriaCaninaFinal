@@ -240,16 +240,17 @@ public class VerDatos extends javax.swing.JFrame {
                 //Obtengo ID de la mascota a editar.
                 int idMascota = Integer.parseInt(String.valueOf(tabla.getValueAt(tabla.getSelectedRow(), 0)));
 
-                //Llamo al método traerDato.
-                Mascota masco = control.traerDato(idMascota);
-                
-                
+                //Instancio el jFrame de modificar 
+                ModificarDatos modi = new ModificarDatos(idMascota);
+                modi.setVisible(true);
+                modi.setLocationRelativeTo(null);
+                this.dispose();
                 
             } else {
-                mostrarMensaje("Seleccione para eliminar", "error", "Eliminación de Datos");
+                mostrarMensaje("Seleccione para Modificar", "error", "Modificación de Datos");
             }
         } else {
-             mostrarMensaje("No hay datos para eliminar", "error", "Eliminación de Datos");
+             mostrarMensaje("No hay datos para modificar", "error", "Modificación de Datos");
         }
     }//GEN-LAST:event_btnEditarActionPerformed
 
