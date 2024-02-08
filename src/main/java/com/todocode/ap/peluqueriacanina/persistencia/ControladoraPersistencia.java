@@ -35,16 +35,23 @@ public class ControladoraPersistencia {
         return mascotaJpa.findMascota(idMascota);
     }
 
-    public void editarMascota(Duenio duenio, Mascota mascota) {
-        try {
-            //primero editar el duenio
-            duenioJpa.edit(duenio);
-        } catch (Exception ex) {
-            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public void editarMascota(Mascota mascota) {
+        
         try {
             //segundo editar la mascota asociada con el duenio
             mascotaJpa.edit(mascota);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public Duenio traerDuenio(int idDuenio) {
+        return duenioJpa.findDuenio(idDuenio);
+    }
+
+    public void modificarDuenio(Duenio duenio) {
+        try {
+            duenioJpa.edit(duenio);
         } catch (Exception ex) {
             Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
         }

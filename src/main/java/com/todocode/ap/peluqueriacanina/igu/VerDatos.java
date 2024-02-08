@@ -14,6 +14,7 @@ public class VerDatos extends javax.swing.JFrame {
     public VerDatos() {
         this.control = new Controladora();
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
