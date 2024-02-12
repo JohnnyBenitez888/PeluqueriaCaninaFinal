@@ -1,4 +1,3 @@
-
 package com.todocode.ap.peluqueriacanina.igu;
 
 import com.todocode.ap.peluqueriacanina.logica.Controladora;
@@ -10,9 +9,8 @@ import javax.swing.JOptionPane;
  */
 public class CargaDatos extends javax.swing.JFrame {
 
-    
     Controladora control = new Controladora();
-    
+
     public CargaDatos() {
         initComponents();
         setLocationRelativeTo(null);
@@ -333,16 +331,16 @@ public class CargaDatos extends javax.swing.JFrame {
         String raza = txtRaza.getText();
         String color = txtColor.getText();
         String observa = txtAObservaciones.getText();
-        String alergico  = (String) boxAlergico.getSelectedItem();
+        String alergico = (String) boxAlergico.getSelectedItem();
         String ateEspe = (String) boxAtencion.getSelectedItem();
         String nameDuenio = txtNombreDueño.getText();
         String tel = txtTel.getText();
-        
-        control.guardar(nameMascota, raza, color, observa, alergico, ateEspe,nameDuenio, tel);
+
+        control.guardar(nameMascota, raza, color, observa, alergico, ateEspe, nameDuenio, tel);
         limpiar();
-        
+
         JOptionPane.showMessageDialog(null, "Carga de datos Exitosa");
-        
+
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     //BOTON LIMPIAR--------------------------
@@ -350,8 +348,7 @@ public class CargaDatos extends javax.swing.JFrame {
         limpiar();
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
-    
-    public void limpiar(){
+    public void limpiar() {
         txtNombreMascota.setText("");
         txtRaza.setText("");
         txtColor.setText("");
@@ -361,7 +358,7 @@ public class CargaDatos extends javax.swing.JFrame {
         txtTel.setText("");
         txtAObservaciones.setText("");
     }
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> boxAlergico;
